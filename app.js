@@ -124,7 +124,7 @@ function tomar__turno(nombreYApellido) {
 
 
 do {
-    pregunta__bienvenida = prompt('Buenas tardes, ¿Desea reservar un turno? S/N');
+    pregunta__bienvenida = prompt('Bienvenido, ¿Desea reservar un turno? S/N');
 
 
     
