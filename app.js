@@ -110,29 +110,17 @@ function tomar__turno(nombreYApellido) {
 
                         return tomar__turno (nombreYApellido);
 
-
-
                 }
-
-
 
             }
 
-
-
-        }
-    
-    
+        }  
 
     } while (profesional_medico !== 'S');
-
-
 
     alert(`Perfecto ${nombreYApellido} tenes ${consul} turnos medicos reservados ` + '\n' + 'Gracias por atenderte aqui!');
 
 }
-
-
 
 
 do {
