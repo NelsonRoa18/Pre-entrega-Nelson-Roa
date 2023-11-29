@@ -58,7 +58,7 @@ function tomar__turno(nombreYApellido) {
 
                         consul__clinico++;
 
-                        return tomar__turno (nombreYApellido);
+                        return tomar__turno(nombreYApellido);
 
                     case traumatologo:
                         if (consul__trauma == 0) {
@@ -69,7 +69,7 @@ function tomar__turno(nombreYApellido) {
 
                         consul__trauma++;
 
-                        return tomar__turno (nombreYApellido);
+                        return tomar__turno(nombreYApellido);
 
                     case psicologo:
                         if (consul__psico == 0) {
@@ -80,7 +80,7 @@ function tomar__turno(nombreYApellido) {
 
                         consul__psico++;
 
-                        return tomar__turno (nombreYApellido);
+                        return tomar__turno(nombreYApellido);
 
                     case dermatologo:
                         if (consul__derma == 0) {
@@ -91,7 +91,7 @@ function tomar__turno(nombreYApellido) {
 
                         consul__derma++;
 
-                        return tomar__turno (nombreYApellido);
+                        return tomar__turno(nombreYApellido);
 
                     case ginecologo:
                         if (consul__gine == 0) {
@@ -102,23 +102,42 @@ function tomar__turno(nombreYApellido) {
 
                         consul__gine++;
 
-                        return tomar__turno (nombreYApellido);
+                        return tomar__turno(nombreYApellido);
 
 
                     default:
                         alert('Usted a ingresado una opcion incorrecta');
 
-                        return tomar__turno (nombreYApellido);
+                        return tomar__turno(nombreYApellido);
 
                 }
 
             }
 
-        }  
+        }
 
     } while (profesional_medico !== 'S');
 
-    alert(`Perfecto ${nombreYApellido} tenes ${consul} turnos medicos reservados ` + '\n' + 'Gracias por atenderte aqui!');
+    for (let i = 0; i < consul.length; i++) {
+        if (consul__clinico !== 0) {
+            let profesional = 'Medico clinico';
+            alert(`Perfecto ${nombreYApellido} tenes ${consul} turnos medicos reservados ` + '\n' + `${profesional}` + '\n' + 'Gracias por atenderte aqui!');
+        }
+        if (consul__derma !== 0) {
+            let profesional1 = 'Dermatologo';
+
+        }
+        if (consul__gine !== 0) {
+            let profesional2 = 'Ginecologo';
+        }
+        if (consul__psico !== 0) {
+            let profesional3 = 'Psicologo';
+        }
+        if (consul__trauma !== 0) {
+            let profesional4 = 'Traumatologo';
+        }
+    }
+    /// alert(`Perfecto ${nombreYApellido} tenes ${consul} turnos medicos reservados ` + '\n' + 'Gracias por atenderte aqui!');
 
 }
 
@@ -127,7 +146,7 @@ do {
     pregunta__bienvenida = prompt('Bienvenido, ¿Desea reservar un turno? S/N');
 
 
-    
+
     if (pregunta__bienvenida !== 'N') {
 
         nombreYApellido = prompt('Ingrese nombre y apellido por favor = ');
@@ -137,11 +156,11 @@ do {
             nombreYApellido = prompt('Ingrese nombre y apellido por favor = ');
         } else {
             tomar__turno(nombreYApellido);
-            
+
         }
 
-    }else {
-        alert ('Hasta luego!');
+    } else {
+        alert('Hasta luego!');
     }
 
 } while (pregunta__bienvenida !== 'N');
